@@ -2,7 +2,7 @@ import { Dimensions } from 'react-native';
 import React, { Component } from 'react';
 
 const basePixelWidth = 375
-px2dp = (px: number): number => {
+const px2dp = (px) => {
     return px * Dimensions.get('window').width / basePixelWidth
 }
 

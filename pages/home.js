@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, StyleSheet ,View, Image } from 'react-native';
 import Swiper from 'react-native-swiper'
-
+import {kScreenWidth} from '../utils/index'
 export default class Home extends Component {
   render() {
     return (
       <View>
+      <View height={180}>
       <Swiper showsButtons={false} height={180}>
-      <Image source={require('./assets/pfb_tabbar_homepage_2x.png')} style={styles.img} />
-      <Image source={require('./assets/pfb_tabbar_homepage_2x.png')} style={styles.img} />
+      <Image source={require('../assets/banner_01.jpg')} style={styles.img} />
+      <Image source={require('../assets/banner_02.jpg')} style={styles.img} />
     </Swiper>
+    </View>
     </View>
     );
   }
@@ -33,9 +35,9 @@ const styles = StyleSheet.create({
   },
   //布局还是没搞清楚，暂时先这样
   img: {
-    width: kScreenWidth,
-    height: px2dp(180),
-    resizeMode: 'contain'
+    width: 400,
+    height: 180,
+    backgroundColor:'red',
   },
   cardView: {
     flex: 1,
